@@ -25,7 +25,6 @@ export default class Home extends React.Component {
   }
 
   render() {
-    console.log(this.state.fontLoaded)
     return(
       <View>
         { this.state.fontLoaded ? (
