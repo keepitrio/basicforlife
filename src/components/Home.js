@@ -1,7 +1,8 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import { Actions } from 'react-native-router-flux';
-import { Card, CardItem, Body, Container, Footer, FooterTab, Button } from 'native-base';
+import { Card, CardItem, Body, Container } from 'native-base';
+import FooterTabs from './FooterTabs';
 
 const Home = () => {
   return(
@@ -44,19 +45,7 @@ const Home = () => {
           </CardItem>
         </Card>
       </Container>
-      <Footer style={styles.footerTab}>
-        <FooterTab>
-          <Button active>
-            <Text onPress={Actions.home}>My Care</Text>
-          </Button>
-          <Button>
-            <Text>Health Records</Text>
-          </Button>
-          <Button>
-            <Text>Prescriptions</Text>
-          </Button>
-        </FooterTab>
-      </Footer>
+      <FooterTabs />
     </View>
     )
 }
@@ -103,10 +92,6 @@ const styles = StyleSheet.create({
   },
   cardText: {
     color: 'white'
-  },
-  footerTab: {
-    position: "absolute",
-    bottom: -475
   }
 });
 
