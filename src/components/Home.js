@@ -53,7 +53,7 @@ const Home = () => {
 const styles = StyleSheet.create({
   header: {
     fontSize: 30,
-    paddingTop: 55,
+    paddingTop: 85,
     paddingLeft: 40
   },
   homeList1: {

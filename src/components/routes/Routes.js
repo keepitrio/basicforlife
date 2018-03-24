@@ -11,17 +11,16 @@ import ScheduleAppointment from '../ScheduleAppointment';
 export default class Routes extends React.Component {
 
   render(){
-
     return(
       <Router>
         <Scene key='root'>
-          <Scene key="splash" component={ Splash } title="Splash" />
-          <Scene key="home" component={ Home } title="Home" initial={true} />
-          <Scene key="getTreated" component={GetTreated} title="Get Treated" />
-          <Scene key="videoChat" component={VideoChat} title="Video Chat" />
-          <Scene key="scheduleAppointment" component={ScheduleAppointment} title="Schedule Appointment " />
-          <Scene key="record" component={ HealthRecord } title="Health Record"  />
-          <Scene key="prescription" component={ Prescription } title="Prescription" />
+          <Scene key="splash" component={ Splash } />
+          <Scene key="home" component={ Home } initial={true} hideNavBar={true} />
+          <Scene key="getTreated" component={GetTreated} />
+          <Scene key="videoChat" component={VideoChat} />
+          <Scene key="scheduleAppointment" component={ScheduleAppointment} />
+          <Scene key="record" component={ HealthRecord } />
+          <Scene key="prescription" component={ Prescription } />
         </Scene>
       </Router>
     )
