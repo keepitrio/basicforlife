@@ -2,10 +2,10 @@ import React from 'react';
 import { Text } from 'react-native';
 import { Action } from 'react-native-router-flux';
 
-const Home = () => {
+const HealthRecord = () => {
   return(
-    <Text> This is home! </Text>
+    <Text> This is HealthRecord! </Text>
     )
 }
 
-export default Home;
+export default HealthRecord;
