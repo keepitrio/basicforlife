@@ -32,24 +32,24 @@ export default class Splash extends React.Component {
 
 	  render() {
 		  return (
-
+		  	<View style={styles.background}>
 		      <View style={styles.buttonView}>
 		  		{ this.state.fontLoaded ? (
 				  	<Text style={styles.textSubtitle}> Basic for Life: Because healthcare should always be basic </Text>
 		  		) : null
 		  		}
 		  		{ this.state.fontLoaded ? (
-		  			<Button onPress={ Actions.home } title="Log In" color="#a74d54" style={styles.buttons}/>
+		  			<Button onPress={ Actions.home } title="Log In" color="#a74d54" />
 		  		) : null	
 		  		}
 				{ this.state.fontLoaded ? (
-			      <Button onPress={ Actions.signup } title="Sign Up" color="#877390"/>
+			      <Button onPress={ Actions.signup } title="Sign Up" color="#877390" />
 		  		) : null	
 		  		}
 
 
 		      </View>
-
+		     </View>
 		    )
 		};
 
@@ -57,8 +57,14 @@ export default class Splash extends React.Component {
 		  const styles = StyleSheet.create({
 		  		buttonView: {
 		  			backgroundColor: "#ebe4e7",
-		  			paddingTop: 200
+		  			paddingTop: 200,
+		  			marginLeft: 50,
+		  			marginRight: 50
 
+		  		},
+		  		background: {
+		  			height: "100%",
+		  			backgroundColor: "#ebe4e7"
 		  		},
 		  		text: {
 		  			color: "#54494d",
