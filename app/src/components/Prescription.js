@@ -131,29 +131,27 @@ const styles = StyleSheet.create({
     marginTop: 20,
     marginRight: 40,
     marginLeft: 40,
-    backgroundColor: "#ebe4e7",
+    backgroundColor: "#f0f0f6",
     paddingTop: 30,
     paddingBottom: 50,
     borderRadius: 10,
   },
   cardBody: {
     justifyContent: 'center',
-    backgroundColor: "#ebe4e7",
+    backgroundColor: "#f0f0f6",
   },
   cardItem:{
-    backgroundColor: "#ebe4e7",
+    backgroundColor: "#f0f0f6",
   },
   medicineText: {
     fontSize: 18,
     fontFamily: "SofiaProSemiBold",
     color: "#cc4945",
-    backgroundColor: "#ebe4e7",
     marginBottom: 7,
   },
   prescriptionText: {
     fontSize: 14,
     fontFamily: "SofiaProLight",
     color: "#cc4945",
-    backgroundColor: "#ebe4e7",
   },
 });
