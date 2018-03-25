@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Text, Button, View, StyleSheet } from 'react-native';
+import { Text, Button, View, StyleSheet, Image } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import { Font } from 'expo';
 
@@ -32,33 +31,40 @@ export default class Splash extends React.Component {
 
 	  render() {
 		  return (
-
+		  	<View style={styles.background}>
+			  <Image source={require('../../assets/images/home_login_splash.png')} style={styles.logo}/>
 		      <View style={styles.buttonView}>
 		  		{ this.state.fontLoaded ? (
 				  	<Text style={styles.textSubtitle}> Basic for Life: Because healthcare should always be basic </Text>
 		  		) : null
 		  		}
 		  		{ this.state.fontLoaded ? (
-		  			<Button onPress={ Actions.home } title="Log In" color="#a74d54" style={styles.buttons}/>
-		  		) : null	
+		  			<Button onPress={ Actions.home } title="Log In" color="#a74d54" />
+		  		) : null
 		  		}
 				{ this.state.fontLoaded ? (
-			      <Button onPress={ Actions.signup } title="Sign Up" color="#877390"/>
-		  		) : null	
+			      <Button onPress={ Actions.signup } title="Sign Up" color="#877390" />
+		  		) : null
 		  		}
 
 
 		      </View>
-
+		     </View>
 		    )
 		};
 
 };
 		  const styles = StyleSheet.create({
 		  		buttonView: {
-		  			backgroundColor: "#ebe4e7",
-		  			paddingTop: 200
+					backgroundColor: "#F5F2F4",
+		  			paddingTop: 20,
+		  			marginLeft: 50,
+		  			marginRight: 50
 
+		  		},
+		  		background: {
+		  			height: "100%",
+		  			backgroundColor: "#F5F2F4"
 		  		},
 		  		text: {
 		  			color: "#54494d",
@@ -80,7 +86,11 @@ export default class Splash extends React.Component {
 		  			color: "#ebe4e7",
 		  			fontFamily: "SofiaProSemiBold"
 
-		  		}
+				  },
+				  logo: {
+					  width: "100%",
+					  height: "50%"
+				  }
 
 		  });
 // export default Splash;
