@@ -7,6 +7,7 @@ import HealthRecord from '../HealthRecord';
 import GetTreated from '../GetTreated';
 import VideoChat from '../VideoChat';
 import ScheduleAppointment from '../ScheduleAppointment';
+import Signup from '../Signup';
 
 export default class Routes extends React.Component {
 
@@ -14,13 +15,14 @@ export default class Routes extends React.Component {
     return(
       <Router>
         <Scene key='root'>
-          <Scene key="splash" component={ Splash } />
-          <Scene key="home" component={ Home }  hideNavBar={true}/>
-          <Scene key="getTreated" component={GetTreated} initial={true} hideNavBar={true} />
-          <Scene key="videoChat" component={VideoChat} />
-          <Scene key="scheduleAppointment" component={ScheduleAppointment} />
-          <Scene key="record" component={ HealthRecord } />
-          <Scene key="prescription" component={ Prescription } />
+          <Scene key="splash" component={ Splash } hideNavBar={true}/>
+          <Scene key="home" component={ Home }  hideNavBar={true} initial={true}/>
+          <Scene key="getTreated" component={GetTreated} hideNavBar={true} />
+          <Scene key="videoChat" component={VideoChat} hideNavBar={true}/>
+          <Scene key="scheduleAppointment" component={ScheduleAppointment} hideNavBar={true}/>
+          <Scene key="record" component={ HealthRecord } hideNavBar={true}/>
+          <Scene key="prescription" component={ Prescription } hideNavBar={true}/>
+          <Scene key="signup" component={ Signup } hideNavBar={true}/>
         </Scene>
       </Router>
     )
