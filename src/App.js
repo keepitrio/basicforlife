@@ -5,7 +5,7 @@ import Routes from './components/routes/Routes.js';
 export default class App extends React.Component {
   render() {
     return (
-      <Routes props={this.state}/>
+      <Routes />
     );
   }
 }
