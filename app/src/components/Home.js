@@ -27,7 +27,8 @@ export default class Home extends React.Component {
   render() {
     console.log(this.state.fontLoaded)
     return(
-      <View>
+      <View style= {styles.view}>
+        <View>
         { this.state.fontLoaded ? (
           <Text style={styles.header}>My Care</Text>
         ) : null
@@ -69,6 +70,7 @@ export default class Home extends React.Component {
             </CardItem>
           </Card>
         </Container>
+        </View>
         <FooterTabs />
       </View>
     )
@@ -76,6 +78,9 @@ export default class Home extends React.Component {
 }
 
 const styles = StyleSheet.create({
+  view:{
+    height: "100%",
+  },
   header: {
     fontSize: 30,
     paddingTop: 85,
