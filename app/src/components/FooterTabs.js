@@ -24,7 +24,7 @@ const FooterTabs = () => {
 const styles = StyleSheet.create({
     footerTab: {
         position: "absolute",
-        bottom: -510
+        bottom: 0
       }
 });
 
