@@ -8,22 +8,23 @@ const FooterTabs = () => {
         <Footer style={styles.footerTab}>
             <FooterTab>
                 <Container>
+                    <Text style={styles.dockText} onPress={Actions.home}>My Care</Text>
                     <Button active style={styles.dockButton}>
                         <Image source={require('../../assets/images/my_care.png')} style={styles.dockIcons} />
                     </Button>
-                    <Text onPress={Actions.home}>My Care</Text>
                 </Container>
                 <Container>
+                    <Text style={styles.dockText} onPress={Actions.record}>Health Records</Text>
                     <Button style={styles.dockButton}>
                         <Image source={require('../../assets/images/health_records2.png')} style={styles.dockIcons} />
                     </Button>
-                    <Text>Health Records</Text>
                 </Container>
                 <Container>
+                    <Text style={styles.dockText} onPress={Actions.prescription}>Prescriptions</Text>
                     <Button style={styles.dockButton}>
-                        <Image source={require('../../assets/images/rx.png')} style={styles.dockIcons} />
+                        <Image source={require('../../assets/images/rx.png')} style={[styles.dockIcons, styles.rx]} />
                     </Button>
-                    <Text>Prescriptions</Text>
+
                 </Container>
             </FooterTab>
         </Footer>
@@ -32,9 +33,9 @@ const FooterTabs = () => {
 
 const styles = StyleSheet.create({
     footerTab: {
-        height: 95,
+        height: 80,
         position: "absolute",
-        bottom: -510
+        bottom: 0
     },
     dockButton: {
         flex: 1,
@@ -46,6 +47,14 @@ const styles = StyleSheet.create({
     dockIcons: {
         width: 38,
         height: 30
+    },
+    rx: {
+        height: 35
+    },
+    dockText: {
+        textAlign: "center",
+        marginBottom: 5,
+        marginTop: 10
     }
 });
 

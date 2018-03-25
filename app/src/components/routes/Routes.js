@@ -15,8 +15,8 @@ export default class Routes extends React.Component {
     return(
       <Router>
         <Scene key='root'>
-          <Scene key="splash" component={ Splash } hideNavBar={true}/>
-          <Scene key="home" component={ Home }  hideNavBar={true} initial={true}/>
+          <Scene key="splash" component={ Splash } hideNavBar={true} initial={true}/>
+          <Scene key="home" component={ Home }  hideNavBar={true}/>
           <Scene key="getTreated" component={GetTreated} hideNavBar={true} />
           <Scene key="videoChat" component={VideoChat} hideNavBar={true}/>
           <Scene key="scheduleAppointment" component={ScheduleAppointment} hideNavBar={true}/>

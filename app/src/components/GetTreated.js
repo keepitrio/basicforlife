@@ -27,79 +27,79 @@ export default class GetTreated extends React.Component {
   render() {
     console.log(this.state.fontLoaded)
     return(
-      <View>
-      <View style={styles.header}>
-        { this.state.fontLoaded ? (
-          <Text style={styles.headerText}>Get Treated</Text>
-        ) : null
-        }
-      </View>
-      <View style={styles.subHeader}>
-        { this.state.fontLoaded ? ( 
-          <Text style={styles.subHeaderText}> I think I have a ...</Text>
+      <View style={styles.view}>
+        <View style={styles.header}>
+          { this.state.fontLoaded ? (
+            <Text style={styles.headerText}>Get Treated</Text>
           ) : null
-        }
-      </View>
-      <View style= {styles.treatedBlock}>
-        { this.state.fontLoaded ? ( 
-          <Text style={styles.problemText}> Menstrual Problem </Text>
-          ) : null
-        }
-        { this.state.fontLoaded ? ( 
-          <Text style={styles.symptomsText}> Acne, cramps, bloating </Text>
-          ) : null
-        }
-      </View>
-      <View style= {styles.treatedBlock}>
-        { this.state.fontLoaded ? ( 
-          <Text style={styles.problemText}> Yeast Infection </Text>
-          ) : null
-        }
-        { this.state.fontLoaded ? ( 
-          <Text style={styles.symptomsText}> Vaginal itching, burning and discharge </Text>
-          ) : null
-        }
-      </View>
-      <View style= {styles.treatedBlock}>
-        { this.state.fontLoaded ? ( 
-          <Text style={styles.problemText}> Urinary Tract Infection (UTI) </Text>
-          ) : null
-        }
-        { this.state.fontLoaded ? ( 
-          <Text style={styles.symptomsText}> Burning, frequent urination </Text>
-          ) : null
-        }
-      </View>
-      <View style= {styles.treatedBlock}>
-        { this.state.fontLoaded ? ( 
-          <Text style={styles.problemText}> Skin Issue </Text>
-          ) : null
-        }
-        { this.state.fontLoaded ? ( 
-          <Text style={styles.symptomsText}> Rashe, mole, acne... </Text>
-          ) : null
-        }
-      </View>
-      <View style= {styles.treatedBlock}>
-        { this.state.fontLoaded ? ( 
-          <Text style={styles.problemText}> Cold and Flu </Text>
-          ) : null
-        }
-        { this.state.fontLoaded ? ( 
-          <Text style={styles.symptomsText}> Congestion, cough, fever... </Text>
-          ) : null
-        }
-      </View>
-      <View style= {styles.treatedBlock}>
-        { this.state.fontLoaded ? ( 
-          <Text style={styles.problemText}> Allergies </Text>
-          ) : null
-        }
-        { this.state.fontLoaded ? ( 
-          <Text style={styles.symptomsText} > Congestion, sneezing, itchy eyes </Text>
-          ) : null
-        }
-      </View>
+          }
+        </View>
+        <View style={styles.subHeader}>
+          { this.state.fontLoaded ? (
+            <Text style={styles.subHeaderText}> I think I have a ...</Text>
+            ) : null
+          }
+        </View>
+        <View style= {styles.treatedBlock}>
+          { this.state.fontLoaded ? (
+            <Text style={styles.problemText}> Menstrual Problem </Text>
+            ) : null
+          }
+          { this.state.fontLoaded ? (
+            <Text style={styles.symptomsText}> Acne, cramps, bloating </Text>
+            ) : null
+          }
+        </View>
+        <View style= {styles.treatedBlock}>
+          { this.state.fontLoaded ? (
+            <Text style={styles.problemText}> Yeast Infection </Text>
+            ) : null
+          }
+          { this.state.fontLoaded ? (
+            <Text style={styles.symptomsText}> Vaginal itching, burning and discharge </Text>
+            ) : null
+          }
+        </View>
+        <View style= {styles.treatedBlock}>
+          { this.state.fontLoaded ? (
+            <Text style={styles.problemText}> Urinary Tract Infection (UTI) </Text>
+            ) : null
+          }
+          { this.state.fontLoaded ? (
+            <Text style={styles.symptomsText}> Burning, frequent urination </Text>
+            ) : null
+          }
+        </View>
+        <View style= {styles.treatedBlock}>
+          { this.state.fontLoaded ? (
+            <Text style={styles.problemText}> Skin Issue </Text>
+            ) : null
+          }
+          { this.state.fontLoaded ? (
+            <Text style={styles.symptomsText}> Rashe, mole, acne... </Text>
+            ) : null
+          }
+        </View>
+        <View style= {styles.treatedBlock}>
+          { this.state.fontLoaded ? (
+            <Text style={styles.problemText}> Cold and Flu </Text>
+            ) : null
+          }
+          { this.state.fontLoaded ? (
+            <Text style={styles.symptomsText}> Congestion, cough, fever... </Text>
+            ) : null
+          }
+        </View>
+        <View style= {styles.treatedBlock}>
+          { this.state.fontLoaded ? (
+            <Text style={styles.problemText}> Allergies </Text>
+            ) : null
+          }
+          { this.state.fontLoaded ? (
+            <Text style={styles.symptomsText} > Congestion, sneezing, itchy eyes </Text>
+            ) : null
+          }
+        </View>
         <FooterTabs style={styles.footer} />
       </View>
     )
@@ -107,6 +107,10 @@ export default class GetTreated extends React.Component {
 }
 
 const styles = StyleSheet.create({
+  view: {
+    height: "100%",
+    backgroundColor: '#F5F2F4'
+  },
   header:{
     borderBottomWidth: 3.5,
     borderColor: '#cc4945',
@@ -120,7 +124,6 @@ const styles = StyleSheet.create({
     fontFamily: "SofiaProSemiBold",
   },
   subHeader: {
-    fontSize: 20,
     paddingTop: 10,
     marginLeft: 40,
     marginRight: 40,

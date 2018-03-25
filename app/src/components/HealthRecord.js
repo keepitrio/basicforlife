@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, ScrollView, StyleSheet, Image } from 'react-native';
+import { Text, View, StyleSheet, Image } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import { Card, CardItem, Body, Container, Button } from 'native-base';
 import FooterTabs from './FooterTabs';
@@ -26,7 +26,7 @@ export default class  HealthRecord extends React.Component {
 
   render() {
     return(
-      <ScrollView style={styles.view}>
+      <View style={styles.view}>
         { this.state.fontLoaded ? (
           <Text style={styles.header}>Health Records</Text>
         ) : null
@@ -38,7 +38,7 @@ export default class  HealthRecord extends React.Component {
           <Image source={require('../../assets/images/scans-card.png')} style={styles.card} />
         </Container>
         <FooterTabs />
-      </ScrollView>
+      </View>
     )
   }
 }
@@ -52,12 +52,11 @@ const styles = StyleSheet.create({
     color: "#54494D",
     fontSize: 30,
     paddingTop: 55,
-    paddingBottom: 35,
     fontFamily: "SofiaProSemiBold",
     borderBottomWidth: 3.5,
     borderColor: "#cc4945",
     marginLeft: 40,
-    width: 300,
+    marginRight: 40,
     textAlign: "left",
   },
   homeList1: {
