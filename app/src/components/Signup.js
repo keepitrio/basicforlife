@@ -3,12 +3,15 @@ import React from 'react';
 import { Text, Button, View, StyleSheet } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import { Font } from 'expo';
+import { AppRegistry, TextInput } from 'react-native';
 
-export default class Splash extends React.Component {
+export default class Signup extends React.Component {
 	constructor () {
 		super()
 		this.state = {
 			fontLoaded: false,
+			userName: "Rio",
+			userInsurance: "Kaiser"
 		}
 	}
 	async componentDidMount() {
@@ -21,30 +24,30 @@ export default class Splash extends React.Component {
 		this.setState({ fontLoaded: true});
 	}
 
-	// const Splash = () => {
-
-	  // const goToHome = () => {
-	  //   Actions.home()
-	  // }
-	  // const signUp = () => {
-	  // 	Actions.signup()
-	  // }
 
 	  render() {
 		  return (
 
 		      <View style={styles.buttonView}>
-		  		{ this.state.fontLoaded ? (
-				  	<Text style={styles.textSubtitle}> Basic for Life: Because healthcare should always be basic </Text>
+		      	{ this.state.fontLoaded ? (
+		  			<Text style={styles.textSubtitle}>Name: </Text>
 		  		) : null
 		  		}
 		  		{ this.state.fontLoaded ? (
-		  			<Button onPress={ Actions.home } title="Log In" color="#a74d54" style={styles.buttons}/>
-		  		) : null	
+		  			<TextInput onChangeText={(userName) => this.setState({userName})}
+		  			value={this.state.userName} style={styles.textSubtitle}
+		  			/>
+		  		) : null
 		  		}
-				{ this.state.fontLoaded ? (
-			      <Button onPress={ Actions.signup } title="Sign Up" color="#877390"/>
-		  		) : null	
+		  		{ this.state.fontLoaded ? (
+		  			<Text style={styles.textSubtitle}>Insurance Provider: </Text>
+		  		) : null
+		  		}
+		  		{ this.state.fontLoaded ? (
+		  			<TextInput onChangeText={(userInsurance) => this.setState({userInsurance})}
+		  			value={this.state.userInsurance} style={styles.textSubtitle}
+		  			/>
+		  		) : null
 		  		}
 
 
@@ -56,7 +59,7 @@ export default class Splash extends React.Component {
 };
 		  const styles = StyleSheet.create({
 		  		buttonView: {
-		  			backgroundColor: "#ebe4e7",
+		  			backgroundColor: "#F5F2F4",
 		  			paddingTop: 200
 
 		  		},
