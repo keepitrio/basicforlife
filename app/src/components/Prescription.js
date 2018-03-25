@@ -89,6 +89,12 @@ export default class Prescription extends React.Component {
             </Body>
           </CardItem>
         </Card>
+          { this.state.fontLoaded ? (
+            <Text style={styles.orderText}>
+              Order Now >
+            </Text>
+          ) : null
+          }
         </View>
         <FooterTabs />
       </View>
@@ -99,7 +105,8 @@ export default class Prescription extends React.Component {
 const styles = StyleSheet.create({
   view:{
     height: "100%",
-    backgroundColor: "#F5F2F4"
+    backgroundColor: "#F5F2F4",
+
   },
   header:{
     borderBottomWidth: 3.5,
@@ -154,4 +161,13 @@ const styles = StyleSheet.create({
     fontFamily: "SofiaProLight",
     color: "#cc4945",
   },
+  orderText: {
+    marginTop: 100,
+    fontFamily: "SofiaProSemiBold",
+    color: "#cc4945",
+    fontSize: 25,
+    textAlign: "center",
+
+
+  }
 });
